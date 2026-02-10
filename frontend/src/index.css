@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  
+}
+.App{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-links a.active {
+  color: tomato;
+  font-weight: bold;
+}
+
+.nav li{
+  list-style: none;
+  cursor: pointer;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 5%;
+   }
