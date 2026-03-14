@@ -3,6 +3,7 @@ import './Home.css';
 import Header from '../../components/header/header';
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   const [category, setCategory] = useState("All");
@@ -11,6 +12,7 @@ const Home = () => {
       <Header/>
       <ExploreMenu category={category} setCategory={setCategory}/>
       <FoodDisplay category={category} />
+      <Footer/>
     </div>
   );
 };
