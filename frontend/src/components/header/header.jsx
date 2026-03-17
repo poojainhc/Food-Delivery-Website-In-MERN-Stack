@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-content">
-        <h2>Welcome to Food Order App. Order your favorite meals now!
+        <h2>Order your favorite meals now!
         </h2>
         <p>Delicious food delivered to your doorstep.</p>
         <button className="view-menu-btn">View Menu</button>

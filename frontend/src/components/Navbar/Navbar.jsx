@@ -1,16 +1,19 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
 import "./navbar.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [menu, setMenu] = useState("menu");
   return (
     <div className="navbar">
       <img src="/src/assets/frontend_assets/logo.png" alt="Logo" className="logo" />
 
-      <ul className="nav-links">
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/menu">Menu</NavLink></li>
-        <li><NavLink to="/orders">Orders</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
+      <ul className="navbar-menu">
+        <Link to="/" onClick={()=>setMenu("home")} className={menu==="home" ? 'active' : ''}>Home</Link>
+        <a href="#explore-menu" onClick={()=>setMenu("menu")} className={menu==="menu" ? 'active' : ''}>Menu</a>
+        <a href="#appdownload" onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app" ? 'active' : ''}>Mobile-app</a>
+        <a href="#footer" onClick={()=>setMenu("contact")} className={menu==="contact" ? 'active' : ''}>Contact</a>
       </ul>
 
       <div className="navbar-right">

@@ -4,17 +4,35 @@
     justify-content: space-between;
     align-items: center;
 }
-navbar .logo{
-    font-size: 24px;
-    font-weight: bold;
-    width: 120px;
+.navbar .logo{
+    width: 150px;
 }
 
-.nav-links{
+.navbar-basket-icon{
+    position: relative;
+}
+
+.dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+   }
+/*   */
+.navbar-menu{
     display: flex;
     gap: 20px;
     list-style: none;
+    cursor: pointer;
     font-size: 18px;
+}
+
+.navbar-menu .active{
+    border-bottom: 2px solid tomato;
+    padding-bottom: 2px;
 }
 
 .navbar-right{
@@ -25,13 +43,73 @@ navbar .logo{
 
 .login-button{
     padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: #ff6347;
+    border:  #ff6347 solid 2px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .login-button:hover{
-    background-color: #fff4f2;
+    background-color:  #ff6347;
+    color: white;
+}
+
+@media (max-width:1050px){
+
+.navbar .logo{
+    width:140px;
+}
+
+.navbar-menu{
+    gap:20px;
+    font-size:17px;
+}
+
+.navbar-right{
+    gap:30px;
+}
+
+.navbar-right img{
+    width:22px;
+}
+
+.login-button{
+    padding:8px 25px;
+}
+
+}
+
+@media (max-width:900px){
+
+.navbar .logo{
+    width:120px;
+}
+
+.navbar-menu{
+    gap:15px;
+    font-size:16px;
+}
+
+.navbar-right{
+    gap:20px;
+}
+
+.navbar-right img{
+    width:20px;
+}
+
+.login-button{
+    padding:7px 18px;
+    font-size:15px;
+}
+
+}
+
+@media (max-width:750px){
+
+.navbar-menu{
+    display:none;
+}
 }
