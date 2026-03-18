@@ -108,8 +108,19 @@
 }
 
 @media (max-width:750px){
-
+.navbar{
+    padding: 15px 0px;
+    margin-top: 10px;
+}
 .navbar-menu{
     display:none;
 }
+.login-button{
+    padding:7px 12px;
+    font-size:12px;
+}
+.navbar .logo{
+    width: 120px;
+}
+
 }

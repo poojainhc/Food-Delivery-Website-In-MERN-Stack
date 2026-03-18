@@ -2,8 +2,11 @@ import { memo, useContext } from 'react';
 import './Cart.css';
 import { StoreContext } from '../../Context/StoreContext'
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Cart = () => {
+  const navigate = useNavigate();
   const {cartItems, food_list, removeFromCart,getTotalCartAmount} = useContext(StoreContext);
   return (
     <div className='cart'>
@@ -12,7 +15,7 @@ const Cart = () => {
           <p>Item</p>
           <p>Title</p>
           <p>Price</p>
-          <p>Quantity</p>
+          <p>Qty</p>
           <p>Total</p>
           <p>Remove</p>
         </div>
@@ -35,7 +38,9 @@ const Cart = () => {
     )}})}
       </div>
       <div className='cart-bottom'>
+        
         <div className='cart-total'>
+          <h2>Cart Total</h2>
           <div className="cart-total-details">
           <p>Subtotal</p>
           <p>${getTotalCartAmount().toFixed(2)}</p>
@@ -43,14 +48,14 @@ const Cart = () => {
         <hr/>
         <div className="cart-total-details">
           <p>Delivery Fee</p>
-          <p>${2}</p>
+          <p>${getTotalCartAmount()===0?0:2}</p>
         </div>
         <hr/>
         <div className="cart-total-details">
           <p>Total</p>
-          <p>${(getTotalCartAmount() + 2).toFixed(2)}</p>
+          <p>${(getTotalCartAmount() + (getTotalCartAmount()===0?0:2)).toFixed(2)}</p>
         </div>
-        <button className='checkout-btn'>Proceed to Checkout</button>
+        <button onClick={() => navigate('/orders')} className='checkout-btn'>Proceed to Checkout</button>
         </div>
          <div className='cart-promocode'>
         <p>Have a promocode?</p>
