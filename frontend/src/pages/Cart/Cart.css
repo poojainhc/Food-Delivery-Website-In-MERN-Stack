@@ -1,0 +1,113 @@
+.cart{
+    margin-top: 100px;
+}
+
+.cart-items-title{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: black;
+    font-size: ma(1vw,12px);
+
+}
+.cart-items-item{
+    margin:10px 0px;
+    color: black;
+}
+.cart-items-item img{
+   width: 50px;
+   height:50px;
+}
+
+.cart-bottom{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 80px;
+    gap : max(12vw,20px);
+}
+.cart-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.cart-total-details{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: max(1vw,12px);
+}
+.cart-total hr{
+    margin: 5px;
+}
+.cart-items-title button{
+  background-color: red;
+  color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.checkout-btn{
+    padding: 12px 0px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: max(1vw,12px);
+    border-radius: 4px;
+    width: max(15vw,200px);
+}
+
+.cart-promocode{
+    flex: 1;
+}
+.cart-promocode p{
+    color: black;
+}
+
+.cart-promocode-input{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+
+}
+.cart-promocode-input input{
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+}
+.cart-promocode-input .apply-btn{
+    padding: 12px 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: max(10vw,150px);
+}
+
+@media (max-width:750px){
+    .cart{
+    margin-top: 40px;
+}
+    .cart-bottom{
+        flex-direction: column-reverse;
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
+    .cart-items-item img{
+        width: 40px;
+        height: 40px;
+    }
+    .cart-bottom{
+        margin-top: 30px;
+    }
+}
