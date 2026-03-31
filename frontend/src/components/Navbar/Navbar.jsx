@@ -1,13 +1,23 @@
 import React from "react";
 import "./navbar.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { StoreContext } from "../../Context/StoreContext";
+import { assets } from "../../assets/frontend_assets/assets";
 
 const Navbar = ({ setshowLogin }  ) => {
   const [menu, setMenu] = useState("menu");
-  const {getTotalCartAmount} = useContext(StoreContext);
+  const {getTotalCartAmount,token, setToken} = useContext(StoreContext);
+ 
+ const navigate =useNavigate();
+
+const logOut=()=>{
+ localStorage.removeItem("token")
+ setToken("");
+ navigate("/")
+}
+
   return (
     <div className="navbar">
      <Link to="/"><img src="/src/assets/frontend_assets/logo.png" alt="Logo" className="logo" /></Link>
@@ -27,8 +37,18 @@ const Navbar = ({ setshowLogin }  ) => {
           </Link>
           <div className={getTotalCartAmount() === 0 ? '' : 'dot'}></div>
         </div>
-      
-        <button onClick={() => setshowLogin(true)} className="login-button">Sign In</button>
+       {!token?<button onClick={() => setshowLogin(true)} className="login-button">Sign In</button>:
+       <div className="navbar-profile">
+        <img src={assets.profile_icon} alt=""/>
+        <ul className="navbar-profile-dropdown">
+          <li><img src={assets.bag_icon} alt=""/><p>Orders</p></li>
+          <hr />
+          <li onClick={logOut}><img src={assets.logout_icon} alt=""/><p>LogOut</p></li>
+        </ul>
+
+       </div>
+       }
+        
       </div>
     </div>
   );
