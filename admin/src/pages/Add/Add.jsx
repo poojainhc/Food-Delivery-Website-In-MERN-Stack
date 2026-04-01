@@ -13,7 +13,7 @@ const Add = ({url}) => {
         name:"",
         description:"",
         price:"",
-        category:"salad"
+        category:"Salad"
     })
 
    const onChangeHandler=(event)=>{
@@ -38,7 +38,7 @@ const Add = ({url}) => {
         name:"",
         description:"",
         price:"",
-        category:"salad"
+        category:"Salad"
     })
     setImage(false)
 
@@ -83,6 +83,7 @@ const Add = ({url}) => {
                     <option value="Noodels">Noodels</option>
                 </select>
             </div>
+        
             <div className='product-price flex-col' >
                 <p>Product Price</p>
                 <input onChange={onChangeHandler} value={data.price} type='Number' name="price"  placeholder='20$' required />

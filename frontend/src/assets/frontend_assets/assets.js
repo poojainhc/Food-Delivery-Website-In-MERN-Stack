@@ -112,7 +112,7 @@ export const menu_list = [
         menu_image: menu_7
     },
     {
-        menu_name: "Noodles",
+        menu_name: "Noodels",
         menu_image: menu_8
     }]
 
@@ -320,31 +320,31 @@ export const food_list = [
         category: "Pasta"
     }, {
         _id: "29",
-        name: "Buttter Noodles",
+        name: "Buttter Noodels",
         image: food_29,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Noodels"
     }, {
         _id: "30",
-        name: "Veg Noodles",
+        name: "Veg Noodels",
         image: food_30,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Noodels"
     }, {
         _id: "31",
-        name: "Somen Noodles",
+        name: "Somen Noodels",
         image: food_31,
         price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Noodels"
     }, {
         _id: "32",
-        name: "Cooked Noodles",
+        name: "Cooked Noodels",
         image: food_32,
         price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Noodels"
     }
 ]
