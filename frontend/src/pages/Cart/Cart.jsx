@@ -55,7 +55,7 @@ const Cart = () => {
           <p>Total</p>
           <p>${(getTotalCartAmount() + (getTotalCartAmount()===0?0:2)).toFixed(2)}</p>
         </div>
-        <button onClick={() => navigate('/orders')} className='checkout-btn'>Proceed to Checkout</button>
+        <button onClick={() => navigate('/Orders')} className='checkout-btn'>Proceed to Checkout</button>
         </div>
          <div className='cart-promocode'>
         <p>Have a promocode?</p>
