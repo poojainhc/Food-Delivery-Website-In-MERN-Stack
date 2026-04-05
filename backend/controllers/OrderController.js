@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 //placing user order for frontend
 
 const placeOrder = async(req,res)=>{
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "http://localhost:5174";
   
   try {
     const newOrder = new OrderModel({
@@ -97,6 +97,62 @@ const userOrders = async (req, res) => {
       message: "Error fetching orders"
     });
   }
+}
+
+//admin endpoint to get all orders - not used in frontend but can be useful for admin dashboard in future
+const listOrders = async (req, res) => {
+  try {
+    const orders = await OrderModel.find({});
+    res.json({
+      success: true,
+      data: orders
+    });
+  } catch (error) {
+    console.log(error);
+    res.json({
+      success: false,
+      message: "Error fetching all orders"
+    });
+  }
 };
 
-export {placeOrder,verifyOrder,userOrders};
+//api for updating order status by admin - not used in frontend but can be useful for admin dashboard in future
+ const updateOrderStatus = async (req, res) => {
+  try {
+    console.log("BODY:", req.body); // 👈 ADD THIS
+
+    const { orderId, status } = req.body;
+
+    if (!orderId || !status) {
+      return res.json({
+        success: false,
+        message: "Missing data"
+      });
+    }
+
+    const updated = await OrderModel.findByIdAndUpdate(
+      orderId,
+      { status },
+      { new: true }
+    );
+
+    console.log("UPDATED:", updated); // 👈 ADD THIS
+
+    res.json({
+      success: true,
+      message: "Order status updated",
+      data: updated
+    });
+
+  } catch (error) {
+    console.log(error);
+    res.json({
+      success: false,
+      message: "Error updating order status"
+    });
+  }
+};
+
+
+
+export {placeOrder,verifyOrder,userOrders,listOrders,updateOrderStatus};

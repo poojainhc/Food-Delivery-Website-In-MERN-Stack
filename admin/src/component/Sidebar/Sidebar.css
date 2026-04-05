@@ -22,13 +22,20 @@
     padding: 8px 10px;
     cursor: pointer;
     border-radius: 3px 0 0 3px;
+
+}
+
+.Sidebar-option img{
+    width: 50px;
 }
 
 .Sidebar-option.active{
     background-color: #fff0ed;
     border-color: tomato;
 }
-
+ .Sidebar-option p{
+    font-size: 14px;
+ }
 @media(max-width:900px) {
     .Sidebar-option p{
         display: none;
