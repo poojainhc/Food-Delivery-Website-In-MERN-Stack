@@ -6,7 +6,7 @@ import Orders from "./pages/Orders/Orders";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 import LoginPopup from "./components/LoginPopup/LoginPopup"; 
-import Verify from "./pages/verify/Verify.jsx";
+import Verify from "./pages/Verify/Verify.jsx";
 import MyOrders from "./pages/MyOrders/MyOrders";
 
 function App() {
