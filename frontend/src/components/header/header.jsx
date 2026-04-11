@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import './header.css';
+import './Header.css';
 
 const Header = () => {
   return (
