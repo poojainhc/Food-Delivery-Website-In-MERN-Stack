@@ -1,9 +1,9 @@
 import { memo, useState } from 'react';
 import './Home.css';
-import Header from '../../components/Header/Header.jsx';
-import ExploreMenu from "../../components/ExploreMenu/ExploreMenu.jsx";
-import FoodDisplay from '../../components/FoodDisplay/FoodDisplay.jsx';
-import Appdownload from '../../components/Appdownload/Appdownload.jsx';
+import Header from '../../components/Header/Header';
+import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
+import FoodDisplay from '../../components/FoodDisplay/FoodDisplay';
+import Appdownload from '../../components/Appdownload/Appdownload';
 
 const Home = () => {
   const [category, setCategory] = useState("All");
