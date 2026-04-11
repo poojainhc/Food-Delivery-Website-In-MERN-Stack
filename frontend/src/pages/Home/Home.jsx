@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
 import './Home.css';
-import Header from '../../components/Header/Header';
+import Header from '../../components/Header/header';
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay';
 import Appdownload from '../../components/Appdownload/Appdownload';
