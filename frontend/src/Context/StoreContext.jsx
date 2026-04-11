@@ -9,7 +9,7 @@ const StoreContextProvider  = (props) => {
     const [cartItems, setCartItems] = useState({})
     const [token, setToken] = useState("")
     const [ food_list, setFood_list] = useState([])
-    const url = "http://localhost:4000"
+    const url = "https://food-delivery-website-in-mern-stack-production.up.railway.app/"
        
     const addToCart = async(itemID) => {
             if(!cartItems[itemID]) {
