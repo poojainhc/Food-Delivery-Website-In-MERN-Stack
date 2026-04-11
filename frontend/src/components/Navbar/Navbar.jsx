@@ -20,7 +20,7 @@ const logOut=()=>{
 
   return (
     <div className="navbar">
-     <Link to="/"><img src="/src/assets/frontend_assets/logo.png" alt="Logo" className="logo" /></Link>
+     <Link to="/"><img src="/logo.png" alt="Logo" className="logo" /></Link>
 
       <ul className="navbar-menu">
         <Link to="/" onClick={()=>setMenu("home")} className={menu==="home" ? 'active' : ''}>Home</Link>
@@ -30,10 +30,10 @@ const logOut=()=>{
       </ul>
 
       <div className="navbar-right">
-        <img src="/src/assets/frontend_assets/search_icon.png" alt="Search" className="navbar-search-icon" />
+        <img src="/search_icon.png" alt="Search" className="navbar-search-icon" />
         <div className="navbar-basket-icon">
           <Link to="/cart">
-            <img src="/src/assets/frontend_assets/basket_icon.png" alt="Basket" />
+            <img src="/basket_icon.png" alt="Basket" />
           </Link>
           <div className={getTotalCartAmount() === 0 ? '' : 'dot'}></div>
         </div>
