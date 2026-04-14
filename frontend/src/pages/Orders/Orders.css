@@ -47,6 +47,15 @@
     margin-top: 30px;
 }
 
+@media (max-width: 900px) {
+    .multi-fileds{
+        flex-wrap: wrap;
+    }
+    .place-order-left .multi-fileds input{
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .place-order {
         flex-direction: column;
@@ -55,17 +64,22 @@
     }
     .place-order-left, .place-order-right {
         max-width: 100%;
+        width: 100%;
     }
-     .place-order-left .title{
-    font-size: 24px;
-    font-weight: 600px;
-    margin-bottom: 30px;
+    .place-order-left .title{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .place-order-left input{
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    .place-order .cart-total button {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .place-order-right {
+        width: 100%;
+    }
 }
-     .place-order-left input{
-    padding: 8px;
-    margin-bottom: 10px;
-}
-     .place-order .cart-total button {
-    margin-top: 20px;
-    width: 100%;
-}}

@@ -3,9 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    gap: 15px;
 }
 .navbar .logo{
     width: 150px;
+    max-width: 150px;
+}
+
+.navbar-desktop .navbar-menu{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .navbar-basket-icon{
@@ -20,14 +31,58 @@
     border-radius: 50%;
     top: -8px;
     right: -8px;
-   }
-/*   */
-.navbar-menu{
-    display: flex;
-    gap: 20px;
-    list-style: none;
+}
+
+.navbar-mobile-toggle{
+    display: none;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    font-size: 18px;
+    padding: 8px;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-mobile-toggle span{
+    width: 24px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+}
+
+.navbar-mobile-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    z-index: 20;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.navbar-mobile-menu.open{
+    display: flex;
+}
+
+.navbar-mobile-menu a,
+.navbar-mobile-menu .active{
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    padding: 10px 0;
+    color: #333;
+}
+
+.navbar-mobile-menu a:hover,
+.navbar-mobile-menu .active:hover{
+    color: tomato;
 }
 
 .navbar-menu .active{
@@ -143,19 +198,30 @@
 }
 
 @media (max-width:750px){
-.navbar{
-    padding: 15px 0px;
-    margin-top: 10px;
-}
-.navbar-menu{
-    display:none;
-}
-.login-button{
-    padding:7px 12px;
-    font-size:12px;
-}
-.navbar .logo{
-    width: 120px;
+    .navbar{
+        padding: 15px 0px;
+        margin-top: 10px;
+    }
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile-toggle{
+        display: flex;
+    }
+    .navbar-right{
+        gap: 12px;
+    }
+    .login-button{
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+    .navbar .logo{
+        width: 120px;
+    }
 }
 
+@media (max-width: 900px) {
+    .navbar-mobile-toggle{
+        display: none;
+    }
 }

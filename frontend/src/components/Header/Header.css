@@ -1,16 +1,17 @@
 .header{
-    height: 34vw;
-    background: url('/header_img.png') no-repeat center; 
+    height: min(42vw, 520px);
+    background: url('/header_img.png') no-repeat center;
     margin: 30px auto;
     background-size: contain;
     position: relative;
+    overflow: hidden;
 }
 
 .header-content{
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
@@ -19,14 +20,16 @@
 }
 
 .header-content h2{
-    font-size:max(4.5vw, 22px);
+    font-size: max(4.5vw, 26px);
     font-weight: 500;
     color: #FFFFFF;
+    line-height: 1.1;
 }
 
 .header-content p{
-    font-size: 1vw;
+    font-size: max(1.1vw, 14px);
     color: #FFFFFF;
+    max-width: 420px;
 }
 
 .header-content button{
@@ -36,26 +39,39 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-weight: 500px;
+    font-weight: 500;
     font-size: max(1vw, 13px);
 }
 
-@media (max-width:1050px){
-.header-content{
-    max-width: 45%;
+@media (max-width: 1050px) {
+    .header-content{
+        max-width: 55%;
+        left: 5vw;
+    }
 }
 
-}
-
-@media (max-width:750px){
-.header-content{
-    max-width: 65%;
-}
-
-.header-content p{
-    display: none;
-}
-.header-content button{
-    padding: 2vw 4vw; 
-}
+@media (max-width: 750px) {
+    .header{
+        height: auto;
+        padding: 80px 0 40px;
+        background-size: cover;
+    }
+    .header-content{
+        position: static;
+        max-width: 100%;
+        bottom: auto;
+        left: auto;
+        padding: 0 15px;
+    }
+    .header-content h2{
+        font-size: 32px;
+    }
+    .header-content p{
+        font-size: 15px;
+        max-width: 100%;
+    }
+    .header-content button{
+        padding: 12px 24px;
+        width: fit-content;
+    }
 }

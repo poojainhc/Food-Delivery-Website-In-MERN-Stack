@@ -41,3 +41,22 @@
     cursor: pointer;
     margin-top: 10px;
 }
+
+@media (max-width: 900px) {
+    .add{
+        width: 95%;
+        margin: 20px auto;
+    }
+    .add-product-name,
+    .add-product-discription{
+        width: 100%;
+    }
+    .add-category-price{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .add-category-price select,
+    .add-category-price input{
+        width: 100%;
+    }
+}

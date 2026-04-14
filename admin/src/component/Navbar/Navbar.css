@@ -12,3 +12,11 @@
 .navbar .profile{
  width: 40px;
 }
+
+@media (max-width: 900px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

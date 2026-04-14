@@ -51,3 +51,23 @@
         width: 60px;
     }
 }
+
+@media(max-width: 700px){
+    .order-item{
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+    .order-item img{
+        width: 50px;
+    }
+    .order-item-address{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .order-item p,
+    .order-item select{
+        width: 100%;
+    }
+}

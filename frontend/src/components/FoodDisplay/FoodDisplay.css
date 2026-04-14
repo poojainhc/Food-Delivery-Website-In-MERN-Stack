@@ -1,19 +1,28 @@
 .food-display{
-    
     align-items: center;
     margin-top: 30px;
 }
 
 .food-display h2{
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
     font-weight: 600;
+    text-align: center;
 }
 .food-display-list{
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin-top: 30px;
     gap: 30px;
     row-gap: 50px;
+}
+
+@media (max-width: 650px) {
+    .food-display h2{
+        font-size: 24px;
+    }
+    .food-display-list{
+        gap: 20px;
+        row-gap: 30px;
+    }
 }

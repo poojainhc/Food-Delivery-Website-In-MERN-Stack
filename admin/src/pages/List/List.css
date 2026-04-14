@@ -13,3 +13,23 @@
 .list-table-format img{
     width: 70px;
 }
+
+@media (max-width: 900px) {
+    .list-table-format{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size: 14px;
+    }
+    .list-table-format img{
+        width: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .list-table-format{
+        grid-template-columns: 1fr 1fr;
+        font-size: 13px;
+    }
+    .list-table-format p{
+        word-break: break-word;
+    }
+}

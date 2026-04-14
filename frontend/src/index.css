@@ -5,18 +5,32 @@
   scroll-behavior: smooth;
 }
 
+html, body{
+  width: 100%;
+  min-height: 100%;
+}
+
 body{
   min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a{
   text-decoration: none;
-  color:inherit;
-  
+  color: inherit;
 }
+
 .App{
-  width: 80%;
+  width: min(1200px, 95%);
   margin: auto;
+  padding: 0 10px;
+}
+
+@media (max-width: 900px) {
+  .App{
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .nav-links a.active {

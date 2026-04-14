@@ -56,17 +56,34 @@
         row-gap: 5px;
     }
 
-        .my-orders-order img{
-            width:40px;
-        }
-        .my-orders-order p span{
-            display: block;
-        }
-        .my-orders-order p b{
-            display: block;
-        }
-        .my-orders-order button{
-            padding: 6px 12px;
-            font-size: 12px;
-        }
+    .my-orders-order img{
+        width:40px;
+    }
+    .my-orders-order p span{
+        display: block;
+    }
+    .my-orders-order p b{
+        display: block;
+    }
+    .my-orders-order button{
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-orders-order{
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 15px;
+    }
+    .my-orders-order img{
+        width: 48px;
+    }
+    .my-orders-order button{
+        width: 100%;
+    }
+    .my-orders-order p{
+        font-size: 13px;
+    }
 }
